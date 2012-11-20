@@ -138,7 +138,7 @@
     Timer.prototype.after = function (when, callback) {
         var self = this;
         Timer.prototype.bind.call(self, when, function fn () {
-            Timer.prototype.unbind.call(self, fn);
+            Timer.prototype.unbind.call(self, callback);
             callback.apply(this, arguments);
         });
     };
